@@ -35,6 +35,7 @@ public class MainPageTest {
     }
 
     @Test
+    @DisplayName("Кнопка <Visible After 5 Seconds> появляется через 5 сек после открытия страницы")
     public void hideButtonTest() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#visibleAfter")));
